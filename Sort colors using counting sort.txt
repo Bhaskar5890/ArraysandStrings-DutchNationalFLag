@@ -1,0 +1,40 @@
+public class Solution {
+    public void SortColors(int[] nums) 
+    {
+        int zeroNos = 0;
+        int oneNos = 0;
+        int twoNos = 0;
+        for(int i = 0; i < nums.Length ; i++)
+        {
+            if(nums[i] == 0)
+            {
+                zeroNos++;
+            }
+            if(nums[i] == 1)
+            {
+                oneNos++;
+            }
+            if(nums[i] == 2)
+            {
+                twoNos++;
+            }
+        }
+        
+        int j = 0;
+        while(j < zeroNos)
+        {
+            nums[j] = 0;
+            j++;
+        }
+        while(j < zeroNos+oneNos)
+        {
+            nums[j] = 1;
+            j++;
+        }
+        while(j < zeroNos+oneNos+twoNos)
+        {
+            nums[j] = 2;
+            j++;
+        }
+    }
+}
